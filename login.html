@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>PickUp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/loginstyle.css">
+<!-- <script src="https://use.fontawesome.com/fcbf3ec2ad.js"></script> -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+</head>
+<body>
+
+<!--facebook login-->
+
+
+<!--begin bootstrap-->
+
+<div class="video-container">
+      <div class="container-fluid">
+        <div class="btn btn-default" id="login-button">
+      <h4>Log in</h4>
+      </div>
+    </div>  
+       <img src="assets/images/nightsoccer.jpg" width = "100%">
+</div>
+
+<div class="container">
+  <!-- MODAL -->
+    <div id="modal-login">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img id="login-logo" src="assets/images/basketballlogo.png" alt="All Y'all logo">
+            <h1 class="modal-title text-center" id="modal-login-label">Pick Up</h1>
+            <p id="tagline" class="text-center">Get out and play.</p>
+          </div>
+          <div class="modal-body">
+                    <form role="form">
+                      <div class="form-group">
+              <input type="name" class="form-control" id="nameInput" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="emailInput" placeholder="Email">
+            </div>
+            <div id="form-redo" class="form-group">
+              <input type="password" class="form-control" id="createPasswordInput" placeholder="Create a password">
+            </div>
+            <button type="submit" class="btn btn-default" id="newUser">Continue</button>
+            <button type="submit" class="btn btn-default" id="logout">logout</button>
+             <button type="submit" class="hidden btn btn-default" id="loginin">login</button>
+            <hr>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <button id="facebook-btn" type="submit" data="facebook" class="signin btn btn-primary"><i class="fa fa fa-facebook" aria-hidden="true"></i> Sign up with Facebook</button>
+                <button id="google-btn" type="submit" data="google" class="signin btn btn-danger"><i class="fa fa-google-plus" aria-hidden="true"></i> Sign up with Google</button>
+                                <button type="submit" data="facebooklogin" class="fbLogin test hidden btn btn-primary"><i class="fa fa fa-facebook" aria-hidden="true"></i> Sign up with Facebook</button>
+                                <button type="submit" data="googlelogin" class="gLogin test hidden signin btn btn-danger"><i class="fa fa-google-plus" aria-hidden="true"></i> Sign up with Google</button>
+              </div>
+            </div>
+          </form> 
+          </div>
+        </div>
+    </div>
+</div>    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- easter egg library -->
+<script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
+<script type="text/javascript">
+// click login - load existing user prompt
+$("#login-button").on("click", function() {
+    $("#facebook-btn").addClass("hidden")
+    $("#google-btn").addClass("hidden")
+    $(".fbLogin").removeClass("hidden");
+    $(".gLogin").removeClass("hidden");
+    $("#loginin").removeClass("hidden");
+    $("#modal-login-label").html("Log in to see more");
+    $("#newUser").addClass("hidden");
+    $("#tagline").remove();
+    $("#nameInput").remove();
+    $("#form-redo").html('<input type="password" class="form-control" id="PasswordInput" placeholder="Password">')
+    $("#facebook-btn").html('<i class="fa fa fa-facebook" aria-hidden="true"></i> Sign in with Facebook')
+    $("#google-btn").html('<i class="fa fa-google-plus" aria-hidden="true"></i> Sign in with Google</button>')
+});
+
+
+    
+
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/javascript.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+
+</body>
+</html>
