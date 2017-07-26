@@ -116,7 +116,7 @@ function facebookSignIn() {
 		  var user = result.userID;
 		
       console.log('should be the user: '+user);
-		loadMainPage();
+		
         }).catch(function(error) {
 			// Handle Errors here.
 			var errorCode = error.code;
