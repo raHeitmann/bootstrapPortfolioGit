@@ -108,6 +108,8 @@ function facebookSignIn() {
 	console.log('here we go facebook!')
 
 	firebase.auth().signInWithPopup(facebook).then(function(result) {
+
+		console.log("literally anything");
 		  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
 		  var token = result.credential.accessToken;
 		  // The signed-in user info.
