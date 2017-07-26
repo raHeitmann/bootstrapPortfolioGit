@@ -105,7 +105,7 @@ function googleSignIn() {
 //Sign in With FB
 function facebookSignIn() {
 
-	console.log('here we go facebook!')
+	console.log('here we go facebook!');
 
 	firebase.auth().signInWithPopup(facebook).then(function(result) {
 
@@ -115,8 +115,8 @@ function facebookSignIn() {
 		  // The signed-in user info.
 		  var user = result.userID;
 		
-      console.log('should be the user: '+user)
-		
+      console.log('should be the user: '+user);
+		loadMainPage();
         }).catch(function(error) {
 			// Handle Errors here.
 			var errorCode = error.code;
